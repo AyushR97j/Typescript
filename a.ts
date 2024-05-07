@@ -28,7 +28,7 @@ console.log(value);
 */
 
 //Function to return boolean////////////////////////
-
+/*
 function isLegal(age: number): boolean {
   if (age >= 18) return true;
   else return false;
@@ -36,3 +36,29 @@ function isLegal(age: number): boolean {
 
 let result: boolean = isLegal(21);
 console.log(result);
+*/
+
+//Function as an argument////////////////////////////
+
+//Function that takes another function as input,
+//& runs it after 1 second
+
+//Normal JS function :
+//gives error :
+//Parameter 'fn' implicitly has an 'any' type.
+/*
+function runAfter1sJS(fn) {
+    setTimeout(fn, 1000);
+}
+runAfter1sJS( function() {
+    console.log("Javascript function");
+})
+*/
+//Typescript Function for same :
+
+function runAfter1sTS(fn: () => void) {
+    setTimeout(fn, 1000);
+}
+runAfter1sTS( function() {
+    console.log("Typescript function");
+})
