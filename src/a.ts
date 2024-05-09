@@ -55,10 +55,36 @@ runAfter1sJS( function() {
 })
 */
 //Typescript Function for same :
-
+/*
 function runAfter1sTS(fn: () => void) {
     setTimeout(fn, 1000);
 }
 runAfter1sTS( function() {
     console.log("Typescript function");
 })
+*/
+
+//Interfaces//////////////////////////////
+
+interface User {
+    firstName: string;
+    lastName: string;
+    age: number;
+    email?: string
+};
+
+function isLegal(user: User) {
+    if(user.age > 18) {
+        console.log("user is 18+");
+    }
+    else {
+        console.log("user is not 18+");
+    }
+}
+
+isLegal({
+    firstName: "Ayush",
+    lastName: "Raj",
+    age: 21
+})
+
