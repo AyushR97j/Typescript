@@ -65,7 +65,7 @@ runAfter1sTS( function() {
 */
 
 //Interfaces//////////////////////////////
-
+/*
 interface User {
     firstName: string;
     lastName: string;
@@ -87,4 +87,41 @@ isLegal({
     lastName: "Raj",
     age: 21
 })
+*/
 
+//Types////////////////////////////////////
+
+type User = {
+    firstName: string;
+    lastName: string;
+    age: number;
+}
+
+//Union
+type GreetArg = number | boolean | string;
+
+function greet(id: GreetArg) {
+    console.log(id);
+}
+
+greet(1);
+greet("1");
+greet(true);
+
+//Intersection
+type Employee = {
+    name: string;
+    startDate: Date;
+};
+interface Manager {
+    name: string;
+    department: string;
+};
+
+type TechLead = Employee & Manager; 
+
+const t: TechLead = {
+    name: "Ayush",
+    startDate: new Date(),
+    department: "CS & IT",
+}
