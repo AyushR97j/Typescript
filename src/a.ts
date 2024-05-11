@@ -90,7 +90,7 @@ isLegal({
 */
 
 //Types////////////////////////////////////
-
+/*
 type User = {
     firstName: string;
     lastName: string;
@@ -124,4 +124,18 @@ const t: TechLead = {
     name: "Ayush",
     startDate: new Date(),
     department: "CS & IT",
+}*/
+
+//Arrays in TS/////////////////////////////
+
+function maxValue(arr: number[]) {
+    let maxNum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > maxNum) {
+            maxNum = arr[i];
+        }
+    }
+    return maxNum;
 }
+let maxVal = maxValue([1,3,7,4,8,5]);
+console.log("max value is : ", maxVal);
